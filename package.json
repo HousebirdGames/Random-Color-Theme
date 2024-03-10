@@ -1,0 +1,64 @@
+{
+  "name": "random-color-theme",
+  "displayName": "Random Color Theme",
+  "description": "Dynamically generates a new color theme for your VS Code editor every 4 minutes and 20 seconds.",
+  "version": "1.0.0",
+  "publisher": "HousebirdGames",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HousebirdGames/Random-Color-Theme.git"
+  },
+  "icon": "Random-Color-Theme-Logo.png",
+  "homepage": "https://housebird.games/random-color-theme",
+  "keywords": [
+    "theme",
+    "random",
+    "color",
+    "dynamic",
+    "visual studio code",
+    "customization",
+    "auto theme",
+    "color scheme",
+    "fun"
+  ],
+  "engines": {
+    "vscode": "^1.80.2"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "extension.js",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Random Color Theme 1",
+        "uiTheme": "vs",
+        "path": "./themes/Random Color Theme 1.json"
+      },
+      {
+        "label": "Random Color Theme 2",
+        "uiTheme": "vs",
+        "path": "./themes/Random Color Theme 2.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "randomColorTheme.saveCurrentTheme",
+        "title": "Save Current Theme",
+        "category": "Random Color Theme"
+      },
+      {
+        "command": "randomColorTheme.openSavedThemesFolder",
+        "title": "Open Saved Themes Folder",
+        "category": "Random Color Theme"
+      }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./scripts/generateTheme.js"
+  },
+  "dependencies": {}
+}
