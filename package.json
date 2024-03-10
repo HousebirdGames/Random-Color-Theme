@@ -2,7 +2,7 @@
   "name": "random-color-theme",
   "displayName": "Random Color Theme",
   "description": "Dynamically generates a new color theme for your VS Code editor every 4 minutes and 20 seconds.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "HousebirdGames",
   "repository": {
     "type": "git",
